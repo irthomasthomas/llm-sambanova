@@ -1,9 +1,9 @@
 # llm-sambanova
 
 [![PyPI](https://img.shields.io/pypi/v/llm-sambanova.svg)](https://pypi.org/project/llm-sambanova/)
-[![Changelog](https://img.shields.io/github/v/release/simonw/llm-sambanova?include_prereleases&label=changelog)](https://github.com/simonw/llm-sambanova/releases)
-[![Tests](https://github.com/simonw/llm-sambanova/workflows/Test/badge.svg)](https://github.com/simonw/llm-sambanova/actions?query=workflow%3ATest)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/llm-sambanova/blob/main/LICENSE)
+[![Changelog](https://img.shields.io/github/v/release/ghostofpokemon/llm-sambanova?include_prereleases&label=changelog)](https://github.com/ghostofpokemon/llm-sambanova/releases)
+[![Tests](https://github.com/ghostofpokemon/llm-sambanova/workflows/Test/badge.svg)](https://github.com/ghostofpokemon/llm-sambanova/actions?query=workflow%3ATest)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/ghostofpokemon/llm-sambanova/blob/main/LICENSE)
 
 [LLM](https://llm.datasette.io/) plugin for models hosted by [SambaNova](https://sambanova.ai/)
 
@@ -63,7 +63,7 @@ You can set a shorter alias for a model using the `llm aliases` command like so:
 ```bash
 llm aliases set 405 sambanova/Meta-Llama-3.1-405B-Instruct
 ```
-Now you can prompt Claude using:
+Now you can prompt Llama using:
 ```bash
 cat llm_sambanova.py | llm -m 405 -s 'write some pytest tests for this'
 ```
