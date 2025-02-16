@@ -6,7 +6,7 @@ import requests
 # Hardcoded models for now
 def get_sambanova_models():
     return [
-        {"id": "Meta-Llama-3.2-1B-Instruct"},
+         {"id": "Meta-Llama-3.2-1B-Instruct"},
         {"id": "Meta-Llama-3.2-3B-Instruct"},
         {"id": "Meta-Llama-3.1-8B-Instruct"},
         {"id": "Meta-Llama-3.1-8B-Instruct-8k"},
@@ -14,6 +14,15 @@ def get_sambanova_models():
         {"id": "Meta-Llama-3.1-70B-Instruct-8k"},
         {"id": "Meta-Llama-3.1-405B-Instruct"},
         {"id": "Meta-Llama-3.1-405B-Instruct-8k"},
+        {"id": "DeepSeek-R1-Distill-Llama-70B"},
+        {"id": "Llama-3.1-Tulu-3-405B"},
+        {"id": "Meta-Llama-3.3-70B-Instruct"},
+        {"id": "Meta-Llama-Guard-3-8B"},
+        {"id": "Llama-3.2-90B-Vision-Instruct"},
+        {"id": "Llama-3.2-11B-Vision-Instruct"},
+        {"id": "Qwen2.5-72B-Instruct"},
+        {"id": "Qwen2.5-Coder-32B-Instruct"},
+        {"id": "QwQ-32B-Preview"},
     ]
 
 class SambaNovaChat(Chat):
@@ -45,7 +54,7 @@ class SambaNovaCompletion(Completion):
             "model": self.model_name,
             "prompt": "\n".join(messages),
             "stream": stream,
-            **self.build_kwargs(prompt)
+            **self.build_kwargs(prompt, stream)  # modified: pass stream as argument
         }
 
         api_response = requests.post(
